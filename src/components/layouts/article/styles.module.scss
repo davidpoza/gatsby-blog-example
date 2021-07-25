@@ -1,0 +1,79 @@
+@import 'src/styles/mixins.scss';
+
+.container {
+  background-color: var(--primaryBgColor);
+}
+
+
+.wrapper {
+  margin: 110px auto;
+  @include md {
+    margin-top: 100px;
+    max-width: 1140px;
+  }
+}
+
+.cols {
+  display: flex;
+  align-items: stretch;
+  min-height: 500px;
+
+  @include md {
+    padding: 20px 0 20px 0;
+  }
+
+  flex-direction: column;
+  @include lg {
+    flex-direction: row;
+  }
+
+  article {
+    line-height: 1.5em;
+    // order: 2;
+
+    @include lg {
+      // order: 1;
+      width: 790px;
+      max-width: 790px;
+    }
+    padding: 20px;
+    a:link, a:visited {
+      text-decoration: none;
+      color: var(--secondaryText);
+    }
+    a:hover {
+      color: var(--secondaryText);
+      text-decoration: underline;
+    }
+
+    blockquote {
+      width: 80%;
+      color: #484748;
+      margin: 1rem auto 1rem;
+      text-align: center;
+      font-style: italic;
+      padding: 1rem 1.2rem;
+      border-left: 3px solid #00a77c;
+      p {
+        margin: 0
+      }
+      &:before {
+        content: url(/images/quotationmark.svg);
+        margin-bottom: -20px;
+        margin-left: -7px;
+        display: block;
+        width: 20px;
+      }
+    }
+  }
+
+  aside {
+    // order: 1;
+    padding: 20px;
+
+    @include lg {
+      padding: 0;
+      // order: 2;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import 'src/styles/mixins.scss';
+
+.container {
+  margin-top: 5em;
+  @include md {
+    margin-top: 1em;
+  }
+  text-align: center;
+  padding: 2em;
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  .message {
+    font-size: 3em;
+    font-weight: bold;
+  }
+  .sad {
+    padding: 0;
+    font-size: 9em;
+    @include md {
+      padding: .7em;
+    }
+  }
+}

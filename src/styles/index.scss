@@ -1,0 +1,110 @@
+// globals
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/merriweather-light.woff2");
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/merriweather-light.woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/merriweather-regular.woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  --primaryText: #222;
+  --secondaryText: #4abda0;
+  --primaryBgColor: #fff;
+  --secondaryBgColor: #333333;
+  --tertiaryBgColor: rgb(246, 246, 246);
+  --cardShadowPrimaryColor: rgb(202, 201, 201);
+  --cardShadowSecondaryColor: rgb(236, 236, 236);
+  --infoBgColor: #e3ece2;
+  --infoAccentColor: #00a77c;
+  --dangerBgColor: #ece2e7;
+  --dangerAccentColor: #c11766;
+  --chipBgColor: #e3ece2;
+  --chipTextColor: #222;
+  margin: 0;
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  color: var(--primaryText);
+  background-color: var(--primaryBgColor);
+}
+
+body.dark {
+ --primaryText: rgb(211, 207, 201);
+ --primaryBgColor: rgb(24, 26, 27);
+ --secondaryBgColor: rgb(38, 42, 43);
+ --tertiaryBgColor: #1d2021;
+ --cardShadowPrimaryColor: #353a3c;
+ --cardShadowSecondaryColor: #292d2e;
+ --infoBgColor: rgb(37, 48, 32);
+ --infoAccentColor: #00cd98;
+ --dangerBgColor: #302028;
+ --dangerAccentColor: #aa145a;
+ --chipBgColor: rgb(37, 48, 32);
+ --chipTextColor: rgb(211, 207, 201);
+}
+
+a {
+  overflow-wrap: break-word;
+}
+
+iframe {
+  border: 0;
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #222;
+  -webkit-box-shadow: 0 0 0px 1000px white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+img[src*=".gif"] {
+  margin: auto;
+  width: 80%;
+}
+
+.gatsby-resp-image-figure {
+  margin: auto;
+  width: 80%;
+  figcaption {
+    text-align: left;
+    margin-top: 6px;
+    padding-left: 6px;
+    font-size: 0.8em;
+    border-left: 3px solid #00a77c;
+  }
+}
+
+.gatsby-resp-image-wrapper {
+  // margin: auto;
+  // width: 80%;
+}
+
+.gatsby-highlight {
+  border-radius: 0.3em;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}

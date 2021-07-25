@@ -1,0 +1,71 @@
+@import 'src/styles/mixins.scss';
+
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondaryBgColor);
+  color: white;
+
+  @include md {
+    color: var(--primaryText);
+    background: none;
+    position: sticky;
+    top: 100px;
+    padding: 10px;
+    margin-top: 20px;
+    bottom: unset;
+    left: unset;
+  }
+
+  h3 {
+    font-size: 1em;
+    margin-top: 20px;
+    margin-left: 20px;
+
+    @include md {
+      margin-left: 10px;
+      margin-top: 0
+    }
+    svg {
+      @include md {
+        display: none;
+      }
+      margin-right: 2em;
+    }
+  }
+
+  .content {
+    font-size: 0.9em;
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-left: 2em;
+    padding-right: 2em;
+    @include md {
+      padding-left: 1.2em;
+      padding-right: 1em;
+      max-height: unset;
+      overflow-y: unset;
+    }
+    ul {
+      padding-inline-start: 1em;
+      li p {
+        text-transform:  capitalize;
+        margin: 3px 0 3px 0;
+      }
+      ul {
+        padding-inline-start: 1em;
+      }
+      a:link, a:visited {
+        color: var(--secondaryText);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--secondaryText);
+        font-weight: 400;
+        text-decoration: underline;
+      }
+    }
+  }
+}

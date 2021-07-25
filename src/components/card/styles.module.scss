@@ -1,0 +1,44 @@
+@import 'src/styles/mixins.scss';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 3px 0px var(--cardShadowPrimaryColor);
+  border-left: 1px solid var(--cardShadowSecondaryColor);
+  border-radius: 4px;
+  background-color: var(--tertiaryBgColor);
+}
+
+.image {
+  width: 100%;
+  height: 209px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.body {
+  @include sm {
+    height: 200px;
+  }
+  padding: 0 10px 10px 10px;
+  font-size: 13px;
+  color: grey;
+  //border-left: 1px solid var(--cardShadowSecondaryColor);
+
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  a:link, a:visited {
+    text-decoration: none;
+    color: var(--primaryText);
+  }
+
+  .date {
+    margin-top: 5px;
+    color: grey;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+}

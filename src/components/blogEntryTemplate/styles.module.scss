@@ -1,0 +1,104 @@
+@import 'src/styles/mixins.scss';
+
+.articleHeader {
+  h1 {
+    font-family: Lato, sans-serif;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 0.4em;
+    text-wrap: balance;
+    @include md {
+      font-size: 3.3em;
+    }
+  }
+  .extendedInfo {
+    display: flex;
+    font-size: 0.9em;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @include sm {
+      flex-direction: row;
+    }
+    span:nth-child(3) {
+      @include xs {
+        margin-top: 10px;
+      }
+    }
+    span {
+      text-transform: capitalize;
+      margin: auto 1em;
+      svg {
+        margin-right: 4px;
+      }
+      a:link, a:visited {
+        color: var(--primaryText);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--secondaryText);
+      }
+    }
+  }
+}
+
+.coverImage {
+  width: 100%;
+}
+
+.updatedDateMessage {
+  margin: 1em 0 1em 0;
+  text-align: center;
+  background-color: var(--chipBgColor);
+  color: var(--chipTextColor);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.emptyUpdatedDateMessage {
+  margin: 1em 0 1em 0;
+  width: 22em;
+  padding: 4px;
+  display: none;
+}
+
+.contentInfo {
+  font-size: 0.9em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+
+  @include lg {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .tags {
+    text-align: center;
+
+    a:link {
+      display: inline-block;
+      background-color: var(--chipBgColor);
+      color: var(--chipTextColor);
+      border-radius: 4px;
+      padding: 2px 4px 2px 4px;
+      margin: 2px 4px;
+      white-space: nowrap;
+    }
+
+    a:hover, a:visited:hover {
+      color: var(--chipBgColor);
+      background-color: var(--chipTextColor);
+      text-decoration: none;
+    }
+
+    a:visited {
+      background-color: var(--chipBgColor);
+      color: var(--chipTextColor);
+    }
+
+  }
+}
+

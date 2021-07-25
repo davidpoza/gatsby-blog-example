@@ -1,0 +1,11 @@
+@import 'src/styles/mixins.scss';
+
+.container {
+  padding-left: 30px;
+}
+
+.year {
+  border-bottom: 2px solid #00a77c;
+  border-left: 6px solid #00a77c;
+  padding-left: 5px;
+}

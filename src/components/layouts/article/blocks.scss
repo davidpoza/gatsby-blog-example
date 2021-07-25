@@ -1,0 +1,33 @@
+@import 'src/styles/mixins.scss';
+
+.custom-block {
+  &.info {
+    border-left: 6px solid var(--infoAccentColor);
+    border-radius: 8px;
+    @include md {
+      margin: 0.5em 3em;
+    }
+    padding: 0.5em 1em;
+    background-color: var(--infoBgColor);
+  }
+  &.danger {
+    border-left: 6px solid var(--dangerAccentColor);
+    border-radius: 8px;
+    @include md {
+      margin: 0.5em 3em;
+    }
+    padding: 0.5em 1em;
+    background-color: var(--dangerBgColor);
+  }
+  &.center {
+    text-align: center;
+  }
+  &.floatRight {
+    text-align: right;
+    float: right;
+  }
+  &.floatLeft {
+    float: left;
+    width: 50%;
+  }
+}

@@ -1,0 +1,16 @@
+@import 'src/styles/mixins.scss';
+
+.container {
+  background-color: var(--primaryBgColor);
+}
+
+.main {
+  margin: auto;
+  max-width: 1140px;
+  min-height: 500px;
+  padding: 20px 10px 20px 10px;
+  @include lg {
+    margin-top: 75px;
+    padding: 20px 0 20px 0;
+  }
+}

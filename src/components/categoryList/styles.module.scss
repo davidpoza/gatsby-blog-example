@@ -1,0 +1,54 @@
+@import 'src/styles/mixins.scss';
+
+.container {
+  display: block;
+  margin-top: 30px;
+  @include md {
+    margin-top: 50px;
+  }
+  @include lg {
+    margin-top: 30px;
+  }
+
+  @include xl {
+    margin-top: 50px;
+  }
+}
+
+.categoryTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: capitalize;
+  border-left: 5px solid violet;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  height: 40px;
+
+  .line {
+    border-bottom: 1px solid rgb(199, 198, 198);
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 2px;
+    flex: 1;
+  }
+
+  .showMore {
+    a:link, a:hover, a:visited {
+      color: #00a77c;
+      text-decoration: none;
+    }
+  }
+}
+
+.list {
+  display: grid;
+  @include sm {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include xl {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  column-gap: 1rem;
+  row-gap: 2rem;
+}

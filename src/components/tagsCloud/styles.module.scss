@@ -1,0 +1,29 @@
+.tag {
+  padding: 2px 4px;
+  margin: 4px 8px;
+  color: var(--primaryText);
+  background-color: var(--primaryBgColor);
+  white-space: nowrap;
+  display: inline-block;
+  width: fit-content;
+  border-radius: 2px;
+
+  h3 {
+    font-size: 1.2em;
+    margin-top: 1em;
+  }
+
+  &:link, &:visited, &:hover {
+    text-decoration: none;
+    color: var(--primaryText);
+  }
+  &:hover {
+   background-color: #00a77c;
+   color: white;
+  }
+}
+
+.container {
+  border-top: 6px solid #00a77c;
+  width: 50%,
+}

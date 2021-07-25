@@ -1,0 +1,55 @@
+@import 'src/styles/mixins.scss';
+
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  @include md {
+    width: 60%;
+    margin-top: 0;
+  }
+  .content {
+    .inputContainer {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      width: 100%;
+      border: 1px solid rgb(201, 201, 201);
+      border-radius: 5px;
+
+      svg {
+        width: 2em;
+      }
+      .formControl {
+        font-family: "Merriweather";
+        font-size: 1.1em;
+        padding: 0.5em;
+        border: none;
+        width: 100%;
+        outline: none;
+        background-color: transparent;
+        &:focus {
+          background: transparent;
+        }
+
+      }
+    }
+
+    button {
+      font-family: "Merriweather";
+      font-size: 1.5em;
+      padding: 0.5em;
+      color: white;
+      background-color: #00a77c;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid grey;
+    }
+  }
+}

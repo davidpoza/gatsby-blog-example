@@ -1,0 +1,28 @@
+@import 'src/styles/mixins.scss';
+
+.footer {
+  background-color: var(--secondaryBgColor);
+  color: #aaa;
+}
+
+.container {
+  margin: auto;
+  padding: 20px;
+  text-align: center;
+  max-width: 1140px;
+
+  .cols {
+    display: flex;
+    @include md {
+      flex-direction: row;
+    }
+    flex-direction: column;
+    &>div {
+      @include md {
+        margin: 20px;
+        width: 50% !important;
+      }
+      width: 100% !important;
+    }
+  }
+}

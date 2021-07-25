@@ -1,0 +1,13 @@
+.item {
+  display: flex;
+  align-items: center;
+  a:link, a:hover, a:visited {
+    margin-left: 2em;
+    color: var(--primaryText);
+  }
+  .date {
+    font-size: 0.8em;
+    width: 100px;
+    text-align: right;
+  }
+}

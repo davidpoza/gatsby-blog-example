@@ -1,0 +1,61 @@
+@import 'src/styles/mixins.scss';
+
+.container {
+  @include lg {
+    width: 300px;
+  }
+  border-top: 6px solid #00a77c;
+  padding: 10px;
+  margin-top: 20px;
+  line-height: 1.5em;
+
+  img {
+    border-radius: 50%;
+    float: left;
+    margin-right: 2em;
+    shape-outside:circle();
+  }
+
+  h3 {
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  .content {
+    font-size: 0.9em;
+    padding-left: 0.5em;
+    ul {
+      padding-inline-start: 1em;
+      li p {
+        text-transform:  capitalize;
+        margin: 3px 0 3px 0;
+      }
+      ul {
+        padding-inline-start: 1em;
+      }
+      a:link, a:visited {
+        color: var(--secondaryText);
+        text-decoration: none;
+      }
+      a:hover {
+        color: var(--secondaryText);
+        font-weight: 400;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .socialIcons {
+    text-align: center;
+    svg {
+      font-size: 2.2em;
+      margin: 10px;
+    }
+    a:link, a:visited {
+      color: var(--primaryText);
+    }
+    a:hover {
+      color: #00a77c;
+    }
+  }
+}
